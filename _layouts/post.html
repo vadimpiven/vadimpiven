@@ -4,7 +4,7 @@ layout: default
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-4">
-        {{ page.title }} <span class="badge badge-secondary">{{ page.date | date_to_string }}</span>
+        {{ page.title }} <span class="badge badge-secondary">{{ page.date | date: "%m/%d/%Y" }}</span>
     </h1>
     <p class="lead">{{ content }}</p>
   </div>
