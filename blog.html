@@ -17,9 +17,3 @@ title: Piven.TECH Blog
     </div>
   {% endfor %}
 </div>
-
-<ul class="posts">
-	{% for post in site.posts %}
-	  <li><span>{{ post.date | date: "%m/%d/%Y" }}</span> ~ <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	{% endfor %}
-</ul>
