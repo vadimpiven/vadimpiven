@@ -7,5 +7,5 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
-paginate: 36
+paginate: 12
 paginate_path: "/blog/page/:num/"
