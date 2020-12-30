@@ -17,10 +17,11 @@ title: Piven.TECH Blog
   {% endfor %}
 </div>
 
-<hr/>
+<hr>
 
 <nav aria-label="pagenation navbar">
   <ul class="pagination justify-content-center pagination-md">
+    
     {% if paginator.previous_page %}
       {% if paginator.page == 2 %}
         <li class="page-item">
@@ -72,5 +73,6 @@ title: Piven.TECH Blog
         </a>
       </li>
     {% endif %}
+    
   </ul>
 </nav>
