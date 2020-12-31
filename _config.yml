@@ -22,3 +22,9 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+collections_dir: collections
+collections:
+  - posts
+  - video
+  - audio
+  - texts
