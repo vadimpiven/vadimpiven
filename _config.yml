@@ -23,15 +23,7 @@ defaults:
     values:
       layout: "post"
 collections:
-  posts:
-    output: false
-    sort_by: date
-  video:
-    output: false
-    sort_by: date
-  audio:
-    output: false
-    sort_by: date
-  texts:
-    output: false
-    sort_by: date
+  - posts
+  - video
+  - audio
+  - texts
