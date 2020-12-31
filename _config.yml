@@ -22,7 +22,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-collections_dir: collections
 collections:
   posts:
     output: false
