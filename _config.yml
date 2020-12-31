@@ -24,7 +24,15 @@ defaults:
       layout: "post"
 collections_dir: collections
 collections:
-  - posts
-  - video
-  - audio
-  - texts
+  posts:
+    output: false
+    sort_by: date
+  video:
+    output: false
+    sort_by: date
+  audio:
+    output: false
+    sort_by: date
+  texts:
+    output: false
+    sort_by: date
