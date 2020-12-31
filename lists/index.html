@@ -33,7 +33,7 @@ title: Lists
         <tbody>
           
           {% for video in site.video %}
-            <tr style="transform: rotate(0);">
+            <tr>
               <th scope="row" class="font-monospace">{{ video.date | date: "%Y-%m-%d" }}</th>
               <td><a href="{{ video.link }}" class="text-decoration-none">{{ video.name }}</a></td>
               <td>{{ video.content }}</td>
@@ -57,9 +57,9 @@ title: Lists
         <tbody>
           
           {% for audio in site.audio %}
-            <tr style="transform: rotate(0);">
+            <tr>
               <th scope="row" class="font-monospace">{{ audio.date | date: "%Y-%m-%d" }}</th>
-              <td><a href="{{ audio.link }}" class="stretched-link link-dark text-decoration-none">{{ audio.name }}</a></td>
+              <td><a href="{{ audio.link }}" class="text-decoration-none">{{ audio.name }}</a></td>
               <td>{{ audio.content }}</td>
             </tr>
           {% endfor %}
@@ -81,9 +81,9 @@ title: Lists
         <tbody>
           
           {% for text in site.texts %}
-            <tr style="transform: rotate(0);">
+            <tr>
               <th scope="row" class="font-monospace">{{ text.date | date: "%Y-%m-%d" }}</th>
-              <td><a href="{{ text.link }}" class="stretched-link link-dark text-decoration-none">{{ text.name }}</a></td>
+              <td><a href="{{ text.link }}" class="text-decoration-none">{{ text.name }}</a></td>
               <td>{{ text.content }}</td>
             </tr>
           {% endfor %}
