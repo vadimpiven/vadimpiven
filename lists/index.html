@@ -7,3 +7,32 @@ title: Lists
   Date marks the moment I've finished consuming the thing.
 </p>
 
+<ul class="nav nav-tabs" id="tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" id="video-tab" data-bs-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="true">Video</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="audio-tab" data-bs-toggle="tab" href="#audio" role="tab" aria-controls="audio" aria-selected="false">Audio</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" id="texts-tab" data-bs-toggle="tab" href="#texts" role="tab" aria-controls="texts" aria-selected="false">Texts</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="tabs-content">
+  <div class="tab-pane fade active show" id="video" role="tabpanel" aria-labelledby="video-tab">
+    
+    video...
+    
+  </div>
+  <div class="tab-pane fade" id="audio" role="tabpanel" aria-labelledby="audio-tab">
+    
+    audio...
+    
+  </div>
+  <div class="tab-pane fade" id="texts" role="tabpanel" aria-labelledby="texts-tab">
+    
+    texts...
+    
+  </div>
+</div>
