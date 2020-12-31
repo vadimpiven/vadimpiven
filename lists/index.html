@@ -26,13 +26,14 @@ title: Lists
         <thead>
           <tr>
             <th scope="col" style="min-width: 115px;">Date</th>
-            <th scope="col" style="min-width: 200px;">Name</th>
-            <th scope="col" style="min-width: 350px;">Description</th>
+            <th scope="col" style="min-width: 250px;">Name</th>
+            <th scope="col" style="min-width: 300px;">Description</th>
           </tr>
         </thead>
         <tbody>
           
-          {% for video in site.video %}
+          {% assign video_sorted = site.video | sort: 'date' | reverse %}
+          {% for video in video_sorted %}
             <tr>
               <th scope="row" class="font-monospace">{{ video.date | date: "%Y-%m-%d" }}</th>
               <td><a href="{{ video.link }}" class="text-decoration-none">{{ video.name }}</a></td>
@@ -50,13 +51,14 @@ title: Lists
         <thead>
           <tr>
             <th scope="col" style="min-width: 115px;">Date</th>
-            <th scope="col" style="min-width: 200px;">Name</th>
-            <th scope="col" style="min-width: 350px;">Description</th>
+            <th scope="col" style="min-width: 250px;">Name</th>
+            <th scope="col" style="min-width: 300px;">Description</th>
           </tr>
         </thead>
         <tbody>
           
-          {% for audio in site.audio %}
+          {% assign audio_sorted = site.audio | sort: 'date' | reverse %}
+          {% for audio in audio_sorted %}
             <tr>
               <th scope="row" class="font-monospace">{{ audio.date | date: "%Y-%m-%d" }}</th>
               <td><a href="{{ audio.link }}" class="text-decoration-none">{{ audio.name }}</a></td>
@@ -74,13 +76,14 @@ title: Lists
         <thead>
           <tr>
             <th scope="col" style="min-width: 115px;">Date</th>
-            <th scope="col" style="min-width: 200px;">Name</th>
-            <th scope="col" style="min-width: 350px;">Description</th>
+            <th scope="col" style="min-width: 250px;">Name</th>
+            <th scope="col" style="min-width: 300px;">Description</th>
           </tr>
         </thead>
         <tbody>
           
-          {% for text in site.texts %}
+          {% assign texts_sorted = site.texts | sort: 'date' | reverse %}
+          {% for text in texts_sorted %}
             <tr>
               <th scope="row" class="font-monospace">{{ text.date | date: "%Y-%m-%d" }}</th>
               <td><a href="{{ text.link }}" class="text-decoration-none">{{ text.name }}</a></td>
