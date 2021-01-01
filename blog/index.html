@@ -7,7 +7,7 @@ title: Blog
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Published on {{ post.date | date: "%m/%d/%Y" }}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">Published on {{ post.date | date: "%d/%m/%Y" }}</h6>
           <p class="card-text mb-2">{{ post.excerpt }}</p>
           <a href="{{ post.url }}" class="btn btn-light border py-1 d-grid stretched-link">Read more</a>
         </div>
