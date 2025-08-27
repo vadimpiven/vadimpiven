@@ -1,0 +1,41 @@
+/* Custom styles for Piven.TECH */
+
+/* Table link styling */
+.table tbody td ul li a {
+  color: var(--bs-emphasis-color) !important;
+  text-decoration: underline;
+}
+
+.table tbody td ul li a:hover {
+  color: var(--bs-emphasis-color) !important;
+  text-decoration: underline;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip link accessibility */
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.25rem 0.5rem !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background-color: #007bff !important;
+  color: white !important;
+  text-decoration: none !important;
+  z-index: 1050 !important;
+}
