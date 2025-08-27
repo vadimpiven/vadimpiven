@@ -1,8 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Vadim Piven - Senior Rust & C++ Software Engineer specializing in system programming and cross-platform desktop product development. Open source contributor with experience at MiLaboratories, Kaspersky, and Movavi.">
+    <meta name="keywords" content="Vadim Piven, Rust Developer, C++ Developer, System Programming, Software Engineer">
+    <meta name="author" content="Vadim Piven">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://piven.tech{% if page.url != '/' %}{{ page.url }}{% endif %}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vadim Piven - Senior Rust & C++ Software Engineer">
+    <meta property="og:description" content="Senior Software Engineer specializing in Rust, C++, and system programming. Open source contributor with experience at top tech companies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://piven.tech/">
+    <meta property="og:site_name" content="Piven.TECH">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vadim Piven - Senior Rust & C++ Software Engineer">
+    <meta name="twitter:description" content="Senior Software Engineer specializing in Rust, C++, and system programming. Open source contributor with experience at top tech companies.">
+    
+    <!-- Professional Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Vadim Piven",
+      "jobTitle": "Senior Software Engineer",
+      "description": "Senior Rust & C++ Software Engineer specializing in system programming and open source contributions",
+      "url": "https://piven.tech/",
+      "sameAs": [
+        "https://www.linkedin.com/in/vadimpiven/",
+        "https://github.com/vadimpiven/",
+        "https://leetcode.com/vadimpiven/",
+        "https://t.me/vadimpiven"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "MiLaboratories"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Higher School of Economics",
+          "description": "Master's Degree in System and Software Engineering"
+        },
+        {
+          "@type": "EducationalOrganization", 
+          "name": "MIREA - Russian Technological University",
+          "description": "Bachelor's Degree in Applied Mathematics and Informatics"
+        }
+      ],
+      "knowsAbout": [
+        "Rust Programming",
+        "C++ Development", 
+        "System Programming",
+        "Cross-platform Development",
+        "Desktop Product Development",
+        "Open Source Development",
+        "Software Engineering"
+      ]
+    }
+    </script>
+    
     <meta http-equiv='cache-control' content='no-cache'> 
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
@@ -25,10 +89,10 @@
     <meta name="msapplication-TileImage" content="/assets/common/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     
-    <title>Piven.TECH - {{ page.title }}</title>
+    <title>{% if page.title == 'Home' %}Vadim Piven - Senior Rust & C++ Software Engineer | System Programming Expert{% else %}{{ page.title }} - Vadim Piven | Piven.TECH{% endif %}</title>
 
-    <script async defer data-domain="piven.tech" src="https://plausible.io/js/plausible.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     
     <style>
       .table tbody td ul li a {
@@ -44,12 +108,12 @@
   </head>
 
   <body>
-    <header class="container-flex bg-gradient text-light" style="background-color: #6610f2;">
+    <header class="container-flex bg-gradient text-light" style="background-color: #6610f2;" role="banner">
       <div class="container">
-        <nav class="row navbar navbar-expand-sm navbar-dark">
+        <nav class="row navbar navbar-expand-sm navbar-dark" role="navigation" aria-label="Main navigation">
           <div class="container-fluid">
             
-            <a class="navbar-brand" href="/">Piven.TECH</a>
+            <a class="navbar-brand" href="/" aria-label="Piven.TECH - Home">Piven.TECH</a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -61,19 +125,19 @@
       </div>
     </header>
     
-    <main class="bg-light pt-3 pb-1">
-      <section class="container">{{ content }}</section>
+    <main class="bg-light pt-3 pb-1" role="main" id="main-content">
+      <div class="container">{{ content }}</div>
     </main>
     
     <div class="container-flex" style="height: 4px; background: url(/assets/common/line.svg) center/55% repeat-x"></div>
     
-    <footer class="container text-muted py-3">
+    <footer class="container text-muted py-3" role="contentinfo">
       <div class="d-flex justify-content-between align-items-center">
         
         <span>Copyright &copy; <script>document.write(new Date().getFullYear());</script> Vadim Piven</span>
         <div class="btn-group">
-          <a href="https://github.com/vadimpiven/vadimpiven/tree/gh-pages/{{ page.path }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary">Edit</a>
-          <a href="#" class="btn btn-outline-primary">Back to top</a>
+          <a href="https://github.com/vadimpiven/vadimpiven/tree/gh-pages/{{ page.path }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" aria-label="Edit this page on GitHub">Edit</a>
+          <a href="#main-content" class="btn btn-outline-primary" aria-label="Back to top of page">Back to top</a>
         </div>
         
       </div>
