@@ -20,7 +20,7 @@ title: Home
 <p class="lead">My commitment to Open Source</p>
 <div class="table-responsive">
   <table class="table table-sm table-hover">
-    <thead class="thead-info">
+    <thead>
       <tr>
         <th scope="col">Project</th>
         <th scope="col">Stars</th>
@@ -30,14 +30,42 @@ title: Home
     </thead>
     <tbody>
       <tr>
-        <th scope="row">DefinitelyTyped</th>
+        <td>DefinitelyTyped</th>
         <td><img src="https://img.shields.io/github/stars/DefinitelyTyped/DefinitelyTyped"></td>
         <td>TypeScript</td>
         <td>
           <ul class="list-unstyled">
              <li>
-                <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/73558">
-                  Node.js v20 - fixed type definition for <code>node:fs/promises</code>
+                <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/73558" class="link-body-emphasis">
+                  <mark>Fixed</mark> type definition for <code>node:fs/promises</code> (Node.js v20)
+                </a>
+             </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Apache DataFusion</th>
+        <td><img src="https://img.shields.io/github/stars/apache/datafusion"></td>
+        <td>Rust</td>
+        <td>
+          <ul class="list-unstyled">
+             <li>
+                <a href="https://github.com/apache/datafusion/issues/15810" class="link-body-emphasis">
+                  <mark>Provided test-case and located</mark> issue when SQL view discarded applied column projection
+                </a>
+             </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Deno</th>
+        <td><img src="https://img.shields.io/github/stars/denoland/deno"></td>
+        <td>TypeScript</td>
+        <td>
+          <ul class="list-unstyled">
+             <li>
+                <a href="https://github.com/denoland/deno/issues/30508" class="link-body-emphasis">
+                  <mark>Provided test-case and located</mark> issue with ignored <code>AbortSignal</code> in Node.js polyfill
                 </a>
              </li>
           </ul>
