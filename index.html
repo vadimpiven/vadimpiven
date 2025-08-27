@@ -40,114 +40,22 @@ title: Home
       </tr>
     </thead>
     <tbody class="table-group-divider">
+      {% for contribution in site.contributions %}
       <tr>
         <th scope="row">
-          <a href="https://github.com/DefinitelyTyped/DefinitelyTyped" class="link-body-emphasis">
-            DefinitelyTyped
+          <a href="{{ contribution.link }}" class="link-body-emphasis">
+            {{ contribution.name }}
           </a>
         </th>
-        <td><img src="https://img.shields.io/github/stars/DefinitelyTyped/DefinitelyTyped"></td>
-        <td>TypeScript</td>
+        <td><img src="{{ contribution.badge }}"></td>
+        <td>{{ contribution.langs }}</td>
         <td>
           <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/DefinitelyTyped/DefinitelyTyped/pull/73558" class="link-body-emphasis">
-                  <mark>Fixed</mark> type definition for <code>node:fs/promises</code> (Node.js v20)
-                </a>
-             </li>
+            {{ contribution.content }}
           </ul>
         </td>
       </tr>
-      <tr>
-        <th scope="row">
-          <a href="https://datafusion.apache.org/" class="link-body-emphasis">
-            Apache DataFusion
-          </a>
-        </th>
-        <td><img src="https://img.shields.io/github/stars/apache/datafusion"></td>
-        <td>Rust</td>
-        <td>
-          <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/apache/datafusion/issues/15810" class="link-body-emphasis">
-                  <mark>Provided test-case and located</mark> issue when SQL view discarded applied column projection
-                </a>
-             </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <a href="https://deno.com/" class="link-body-emphasis">
-             Deno
-          </a>
-        </th>
-        <td><img src="https://img.shields.io/github/stars/denoland/deno"></td>
-        <td>TypeScript, Rust</td>
-        <td>
-          <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/denoland/deno/issues/30508" class="link-body-emphasis">
-                  <mark>Provided test-case and located</mark> issue with ignored <code>AbortSignal</code> in Node.js polyfill
-                </a>
-             </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <a href="https://pola.rs/" class="link-body-emphasis">
-             Polars
-          </a>
-        </th>
-        <td><img src="https://img.shields.io/github/stars/pola-rs/polars"></td>
-        <td>Rust, Python</td>
-        <td>
-          <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/pola-rs/polars/issues/23965" class="link-body-emphasis">
-                  <mark>Provided test-case and located</mark> issue with broken <code>Allocator</code> API
-                </a>
-             </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <a href="https://docs.rs/git2/latest/git2/" class="link-body-emphasis">
-             git2-rs (libgit2)
-          </a>
-        </th>
-        <td><img src="https://img.shields.io/github/stars/rust-lang/git2-rs"></td>
-        <td>Rust, C++</td>
-        <td>
-          <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/rust-lang/git2-rs/issues/1142" class="link-body-emphasis">
-                  <mark>Provided test-case and located</mark> issue with missing Windows SDK library
-                </a>
-             </li>
-          </ul>
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">
-          <a href="https://neon-rs.dev/" class="link-body-emphasis">
-             Neon bindings
-          </a>
-        </th>
-        <td><img src="https://img.shields.io/github/stars/rust-lang/git2-rs"></td>
-        <td>Rust, TypeScript</td>
-        <td>
-          <ul class="list-unstyled mb-0">
-             <li>
-                <a href="https://github.com/neon-bindings/neon/issues/1026#issuecomment-2912484650" class="link-body-emphasis">
-                  <mark>Suggested implementation</mark> for <code>AbortSignal</code> support by the spawned Tokio tasks
-                </a>
-             </li>
-          </ul>
-        </td>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 </div>
