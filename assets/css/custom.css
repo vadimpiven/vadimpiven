@@ -43,8 +43,8 @@
 /* Animated stripe at bottom */
 .animated-stripe {
   background-repeat: repeat-x !important;
-  background-size: 50px 4px !important;
-  animation: scroll-stripe 1s linear infinite;
+  background-size: 400px 4px !important;
+  animation: scroll-stripe 2s linear infinite;
 }
 
 @keyframes scroll-stripe {
@@ -52,6 +52,6 @@
     background-position-x: 0px;
   }
   100% {
-    background-position-x: -50px;
+    background-position-x: 400px;
   }
 }
