@@ -42,12 +42,10 @@
 
 /* Animated stripe at bottom */
 .animated-stripe {
-  height: 4px;
-  background-image: url(/assets/common/line.svg) !important;
-  background-repeat: repeat-x !important;
-  background-size: 400px 4px !important;
-  background-position: 0 center !important;
-  animation: scroll-stripe 2s linear infinite !important;
+  display: block;
+  height: 4px !important;
+  background: url(/assets/common/line.svg) repeat-x 0 center / 400px 4px;
+  animation: scroll-stripe 16s linear infinite;
 }
 
 @keyframes scroll-stripe {
@@ -55,6 +53,6 @@
     background-position-x: 0px;
   }
   100% {
-    background-position-x: 400px;
+    background-position-x: 50px;
   }
 }
