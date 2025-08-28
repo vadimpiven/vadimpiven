@@ -6,6 +6,6 @@ langs: Rust
 ---
 <li>
   <a href="https://github.com/apache/datafusion/issues/15810">
-    <mark>Provided test-case and located</mark> issue when SQL view discarded applied column projection
+    <mark>Provided test-case and located</mark> issue with discarded column projection in SQL view
   </a>
 </li>
