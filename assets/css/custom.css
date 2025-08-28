@@ -39,3 +39,17 @@
   text-decoration: none !important;
   z-index: 1050 !important;
 }
+
+/* Animated stripe at bottom */
+.animated-stripe {
+  animation: scroll-stripe 20s linear infinite;
+}
+
+@keyframes scroll-stripe {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
