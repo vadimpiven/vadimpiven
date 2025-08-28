@@ -42,6 +42,6 @@
 
 /* Static stripe at bottom */
 #animated-stripe {
-  height: 4px !important;
-  background: url(/assets/common/line.svg) repeat-x center center / 400px 4px;
+  height: 4px;
+  background: url(/assets/common/line.svg) repeat-x center center;
 }
