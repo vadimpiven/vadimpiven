@@ -45,14 +45,14 @@
   display: block;
   height: 4px !important;
   background: url(/assets/common/line.svg) repeat-x 0 center / 400px 4px;
-  animation: scroll-stripe 2s linear infinite;
+  animation: scroll-stripe 4s linear infinite;
 }
 
 @keyframes scroll-stripe {
   0% {
-    background-position-x: 0px;
+    background-position-x: 0%;
   }
   100% {
-    background-position-x: 400px;
+    background-position-x: 100%;
   }
 }
