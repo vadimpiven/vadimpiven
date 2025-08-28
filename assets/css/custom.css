@@ -41,7 +41,7 @@
 }
 
 /* Animated stripe at bottom */
-.animated-stripe {
+#animated-stripe {
   display: block;
   height: 4px !important;
   background: url(/assets/common/line.svg) repeat-x 0 center / 400px 4px;
