@@ -42,9 +42,12 @@
 
 /* Animated stripe at bottom */
 .animated-stripe {
+  height: 4px;
+  background-image: url(/assets/common/line.svg) !important;
   background-repeat: repeat-x !important;
   background-size: 400px 4px !important;
-  animation: scroll-stripe 2s linear infinite;
+  background-position: 0 center !important;
+  animation: scroll-stripe 2s linear infinite !important;
 }
 
 @keyframes scroll-stripe {
