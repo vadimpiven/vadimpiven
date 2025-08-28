@@ -4,8 +4,8 @@
   let currentPosition = 0;
   
   // Animation settings
-  const PATTERN_REPEAT = 25; // SVG pattern repeats every 25px
-  const CYCLE_DURATION = 15; // seconds for full cycle (15s as you set in CSS)
+  const PATTERN_REPEAT = 400; // SVG pattern repeats every 25px
+  const CYCLE_DURATION = 30; // seconds for full cycle (15s as you set in CSS)
   const SPEED = PATTERN_REPEAT / CYCLE_DURATION; // pixels per second
   
   function animateStripe() {
