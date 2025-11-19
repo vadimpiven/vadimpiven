@@ -1,14 +1,23 @@
 /* Custom styles for Piven.TECH */
 
 /* Table link styling */
-.table tbody td ul li a {
+#contributions > li a {
   color: var(--bs-emphasis-color) !important;
   text-decoration: underline;
 }
 
-.table tbody td ul li a:hover {
+#contributions > li a:hover {
   color: var(--bs-emphasis-color) !important;
   text-decoration: underline;
+}
+
+/* Add spacing between list items in contributions table */
+#contributions > li {
+  margin-bottom: 0.5rem;
+}
+
+#contributions > li:last-child {
+  margin-bottom: 0;
 }
 
 /* Screen reader only content */
