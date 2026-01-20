@@ -11,3 +11,5 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+
+google_analytics: G-D13H3023Z7
