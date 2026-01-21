@@ -9,3 +9,8 @@ langs: Rust
     <mark>Fixed</mark> environment variables config section in mise.toml schema
   </a>
 </li>
+<li>
+  <a href="https://github.com/jdx/mise/pull/7780">
+    <mark>Fixed</mark> rust lockfile support
+  </a>
+</li>
