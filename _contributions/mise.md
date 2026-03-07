@@ -14,3 +14,8 @@ langs: Rust
     <mark>Fixed</mark> rust lockfile support
   </a>
 </li>
+<li>
+  <a href="https://github.com/jdx/mise/pull/8497">
+    <mark>Fixed</mark> task delegation dedup bypass
+  </a>
+</li>
