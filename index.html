@@ -142,6 +142,89 @@ title: Home
 
 <section
   role="region"
+  aria-labelledby="projects-heading"
+>
+  <h2
+    id="projects-heading"
+    class="lead"
+    role="heading"
+    aria-level="2"
+  >
+    What I've built in the open
+  </h2>
+  <div
+    class="table-responsive rounded-top"
+    role="region"
+    aria-label="Open source projects table"
+  >
+    <table
+      class="table table-hover"
+      role="table"
+      aria-label="List of open source projects and gists"
+    >
+      <caption class="sr-only">
+        Open source projects and gists I have created, including project names, type, technologies used, and descriptions
+      </caption>
+      <thead>
+        <tr class="table-success border">
+          <th
+            scope="col"
+            aria-label="Project name"
+          >
+            Project
+          </th>
+          <th
+            scope="col"
+            aria-label="Type: project or gist"
+          >
+            Type
+          </th>
+          <th
+            scope="col"
+            aria-label="Programming languages and technologies"
+          >
+            Technologies
+          </th>
+          <th
+            scope="col"
+            aria-label="Project description"
+          >
+            Description
+          </th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        {% for project in site.projects %}
+        <tr role="row">
+          <th scope="row">
+            <a
+              href="{{ project.link }}"
+              class="link-body-emphasis"
+              aria-label="Visit {{ project.name }} page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ project.name }}
+            </a>
+          </th>
+          <td>
+            {{ project.type_label }}
+          </td>
+          <td aria-label="Technologies: {{ project.langs }}">
+            {{ project.langs }}
+          </td>
+          <td>
+            {{ project.description }}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section
+  role="region"
   aria-labelledby="opensource-heading"
 >
   <h2
@@ -150,7 +233,7 @@ title: Home
     role="heading"
     aria-level="2"
   >
-    My commitment to Open Source
+    My contributions to open source
   </h2>
   <div
     class="table-responsive rounded-top"
