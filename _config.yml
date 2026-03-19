@@ -2,8 +2,6 @@ name: Piven.TECH
 markdown: kramdown
 
 collections:
-  projects:
-    output: false
   contributions:
     output: false
 

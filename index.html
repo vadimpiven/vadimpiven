@@ -160,10 +160,10 @@ title: Home
     <table
       class="table table-hover"
       role="table"
-      aria-label="List of open source projects and gists"
+      aria-label="List of open source projects"
     >
       <caption class="sr-only">
-        Open source projects and gists I have created, including project names, type, technologies used, and descriptions
+        Open source projects I have created, including project names, technologies used, and descriptions
       </caption>
       <thead>
         <tr class="table-success border">
@@ -172,12 +172,6 @@ title: Home
             aria-label="Project name"
           >
             Project
-          </th>
-          <th
-            scope="col"
-            aria-label="Type: project or gist"
-          >
-            Type
           </th>
           <th
             scope="col"
@@ -194,32 +188,163 @@ title: Home
         </tr>
       </thead>
       <tbody class="table-group-divider">
-        {% for project in site.projects %}
         <tr role="row">
           <th scope="row">
             <a
-              href="{{ project.link }}"
+              href="https://github.com/vadimpiven/node-addon-slsa"
               class="link-body-emphasis"
-              aria-label="Visit {{ project.name }} page"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {{ project.name }}
+              node-addon-slsa
             </a>
           </th>
-          <td>
-            {{ project.type_label }}
-          </td>
-          <td aria-label="Technologies: {{ project.langs }}">
-            {{ project.langs }}
-          </td>
-          <td>
-            {{ project.description }}
-          </td>
+          <td>TypeScript</td>
+          <td>Provenance verification for prebuilt native addons with GitHub attestations</td>
         </tr>
-        {% endfor %}
+        <tr role="row">
+          <th scope="row">
+            <a
+              href="https://github.com/vadimpiven/node_reqwest"
+              class="link-body-emphasis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              node_reqwest
+            </a>
+          </th>
+          <td>TypeScript, Rust</td>
+          <td>Node.js bindings for reqwest — a Rust HTTP client library with system proxy, trusted CA certificates, and HTTP/2 out of the box, compatible with Electron</td>
+        </tr>
+        <tr role="row">
+          <th scope="row">
+            <a
+              href="https://github.com/vadimpiven/sample_project"
+              class="link-body-emphasis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              sample_project
+            </a>
+          </th>
+          <td>C++, CMake</td>
+          <td>Sample project to showcase my coding</td>
+        </tr>
+        <tr role="row">
+          <th scope="row">
+            <a
+              href="https://github.com/irreducible-polynoms/irrpoly"
+              class="link-body-emphasis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              irrpoly
+            </a>
+          </th>
+          <td>C++, CMake</td>
+          <td>Irreducibility and primitivity tests for polynomials in finite fields</td>
+        </tr>
+        <tr role="row">
+          <th scope="row">
+            <a
+              href="https://github.com/vadimpiven/opengl_proj1"
+              class="link-body-emphasis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              opengl_proj1
+            </a>
+          </th>
+          <td>C++, GLSL, CMake</td>
+          <td>3D rotating cone rendered with OpenGL, demonstrating triangulation, surface modeling, shader programming, and camera controls</td>
+        </tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<section
+  role="region"
+  aria-labelledby="gists-heading"
+>
+  <h2
+    id="gists-heading"
+    class="lead"
+    role="heading"
+    aria-level="2"
+  >
+    Bits and pieces
+  </h2>
+  <div class="mb-3">
+    <h3 class="h6 fw-bold">macOS</h3>
+    <ul>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/9bb974857226976329a07ac387d3e97a"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Add application to autostart using launchd
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/3373bb2592d59560b5d698ba1e2ed7e4"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get macOS machine UUID using IOKit (Swift 5)
+        </a>
+      </li>
+    </ul>
+    <h3 class="h6 fw-bold">Windows</h3>
+    <ul>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/618b720324e9f54c01075fcb8675f2c4"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get SMBIOS UUID (WinAPI, C++ 17, Boost)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/0f6e50474eee21909026a3a5c7abf1ce"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Executable self delete (WinAPI, C++ 17) — works only on NTFS partitions
+        </a>
+      </li>
+    </ul>
+    <h3 class="h6 fw-bold">Qt</h3>
+    <ul>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/bd6508700bb894f07a37d4eba64758d1"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Use setContextProperty on QQuickWidget to inject JS module in place of QObject (useful for tests)
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://gist.github.com/vadimpiven/ffb49929be96e031078e1d2e9e2d663c"
+          class="link-body-emphasis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          QMainWindow take high quality screenshot with transparency
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
