@@ -1,5 +1,10 @@
 /* Custom styles for Piven.TECH */
 
+/* Prevent wrapping of project names in tables */
+.table th[scope="row"] {
+  white-space: nowrap;
+}
+
 /* Table link styling */
 #contributions > li a {
   color: var(--bs-emphasis-color) !important;
