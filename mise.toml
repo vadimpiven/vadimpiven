@@ -1,0 +1,23 @@
+# Tooling and tasks for the CV.
+#   mise trust
+#   mise install      → fetch Typst
+#   mise run build    → compile the PDF once
+#   mise run watch    → rebuild on every change
+
+[tools]
+"github:typst/typst" = "0.15.0"
+
+[env]
+# Let Typst (and any manual `typst` call in this dir) find the bundled fonts.
+TYPST_FONT_PATHS = "{{config_root}}/fonts"
+
+[tasks.compile]
+description = "Compile to PDF"
+alias = "c"
+run = "typst compile --ignore-system-fonts 'Vadim_Piven_CV.typ'"
+sources = ["**/*.typ", "fonts/**"]
+
+[tasks.watch]
+description = "Recompile PDF on every change"
+alias = "w"
+run = "typst watch --ignore-system-fonts 'Vadim_Piven_CV.typ'"
