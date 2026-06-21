@@ -3,7 +3,7 @@
 
 #include "summary/content.typ"
 
-== Professional Experience
+= Professional Experience
 
 #entries(
   include "jobs/03-milaboratories.typ",
@@ -11,7 +11,7 @@
   include "jobs/01-kaspersky.typ",
 )
 
-== Education
+= Education
 
 #entries(
   include "education/02-hse.typ",

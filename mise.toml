@@ -6,6 +6,8 @@
 
 [tools]
 "github:typst/typst" = "0.15.0"
+"pipx:markitdown" = "0.1.6"
+"npm:markdownlint-cli" = "0.49.0"
 
 [env]
 # Let Typst (and any manual `typst` call in this dir) find the bundled fonts.
@@ -16,6 +18,20 @@ description = "Compile to PDF"
 alias = "c"
 run = "typst compile --ignore-system-fonts 'Vadim_Piven_CV.typ'"
 sources = ["**/*.typ", "fonts/**"]
+
+[tasks.readme]
+description = "Generate README.md from the CV source (Typst → HTML → Markdown)"
+alias = "r"
+# Typst's HTML export keeps headings/links that the PDF loses; markitdown turns it into Markdown.
+# ponytail: experimental HTML export drops `align` (the contacts line); revisit if Typst stabilizes it.
+run = [
+  "typst compile --ignore-system-fonts --format html --features html 'Vadim_Piven_CV.typ' '{{config_root}}/.cv.html'",
+  "markitdown '{{config_root}}/.cv.html' -o 'README.md'",
+  "rm -f '{{config_root}}/.cv.html'",
+  "markdownlint --fix 'README.md'",
+]
+sources = ["**/*.typ", "fonts/**"]
+outputs = ["README.md"]
 
 [tasks.watch]
 description = "Recompile PDF on every change"

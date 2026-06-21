@@ -6,7 +6,8 @@
   set par(justify: true)
   set text(font: "Verdana", size: 10pt)
 
-  // Section headings: centered, with extra space below.
+  // Section headings: centered, 12pt, with extra space below.
+  show heading: set text(size: 12pt)
   show heading: set align(center)
   show heading: set block(below: 1em)
 
