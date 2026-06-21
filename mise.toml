@@ -22,8 +22,7 @@ sources = ["**/*.typ", "fonts/**"]
 [tasks.readme]
 description = "Generate README.md from the CV source (Typst → HTML → Markdown)"
 alias = "r"
-# Typst's HTML export keeps headings/links that the PDF loses; markitdown turns it into Markdown.
-# ponytail: experimental HTML export drops `align` (the contacts line); revisit if Typst stabilizes it.
+depends = ["compile"]
 run = [
   "typst compile --ignore-system-fonts --format html --features html 'Vadim_Piven_CV.typ' '{{config_root}}/.cv.html'",
   "markitdown '{{config_root}}/.cv.html' -o 'README.md'",
