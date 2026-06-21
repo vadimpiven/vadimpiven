@@ -24,11 +24,10 @@ description = "Generate README.md from the CV source (Typst → HTML → Markdow
 alias = "r"
 depends = ["compile"]
 # Typst HTML export keeps the headings/links the PDF loses; pandoc turns it into Markdown.
-# -raw_html drops Typst's <span> underline wrappers and keeps <br> as `\` hard breaks;
-# --wrap=none keeps each paragraph on one line.
+# -raw_html drops Typst's <span> underline wrappers and keeps <br> as `\` hard breaks.
 run = [
   "typst compile --ignore-system-fonts --format html --features html 'Vadim_Piven_CV.typ' '{{config_root}}/.cv.html'",
-  "pandoc -f html -t gfm-raw_html --wrap=none '{{config_root}}/.cv.html' -o 'README.md'",
+  "pandoc -f html -t gfm-raw_html '{{config_root}}/.cv.html' -o 'README.md'",
   "rm -f '{{config_root}}/.cv.html'",
   "markdownlint --fix 'README.md'",
 ]
