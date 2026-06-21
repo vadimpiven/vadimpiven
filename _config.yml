@@ -13,3 +13,7 @@ defaults:
       layout: "default"
 
 google_analytics: G-D13H3023Z7
+
+exclude:
+  - mise.toml
+  - clean.lua

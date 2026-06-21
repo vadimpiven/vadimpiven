@@ -1,0 +1,17 @@
+[tools]
+ruby = "3.3.11"
+pandoc = "3.10"
+"gem:jekyll" = "4.4.1"
+node = "24.17.0"
+"npm:markdownlint-cli" = "0.49.0"
+
+[tasks.build]
+description = "Render site to _site/, then extract pure-info Markdown alongside it"
+run = [
+  "jekyll build",
+  # sed slices the <main> block (drops header/footer chrome); clean.lua strips
+  # presentational attrs so links render as clean Markdown, while pandoc keeps
+  # raw HTML only where GFM can't (the contributions table's list cells).
+  "sed -n '/<main/,/<\\/main>/p' _site/index.html | pandoc -f html -t gfm --wrap=none --lua-filter=clean.lua -o _site/index.md",
+  "markdownlint --fix _site/index.md",
+]

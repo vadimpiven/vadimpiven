@@ -1,0 +1,7 @@
+# Piven.TECH
+
+> Personal site of Vadim Piven, a software engineer based in Bilbao, Spain, building desktop products with Rust and C++.
+
+## Pages
+
+- [Home (Markdown)](https://piven.tech/index.md): Full bio, work experience, education, open-source projects, and contributions to open source.
