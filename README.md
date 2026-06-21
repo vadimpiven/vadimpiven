@@ -12,7 +12,7 @@ performance and seamless user experience.
 [MiLaboratories](https://milaboratories.com/), a biotech startup
 producing software for immune repertoire profiling with 8 out of 10 Big
 Pharma companies among its clients\
-**April 2024 - Present**\
+**April 2024 - Present**
 
 - Developed a data lake for biological data, a domain-specific query
   engine, and a query language providing efficient access to the data in
@@ -39,7 +39,7 @@ TypeScript, Vite, Electron, Python.
 **C++ / Qt Software Developer**\
 [Movavi](https://www.movavi.com/), a company focused on products for
 multi-platform video editing with 3M users in 200+ countries\
-**November 2022 - March 2024**\
+**November 2022 - March 2024**
 
 - Created lightweight web-installer with native UI and a curl-based HTTP
   downloader for both Windows and macOS, which increased successful
@@ -62,7 +62,7 @@ Jenkins, Conan, CMake, Sentry.
 protection, recognized by Gartner as a 2021 Customers’ Choice for
 Endpoint Protection Platforms, 400M individual users and 240K corporate
 users in 200+ countries\
-**February 2020 - October 2022**\
+**February 2020 - October 2022**
 
 - Worked in a team developing the business-logic part of [Kaspersky
   Endpoint

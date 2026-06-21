@@ -18,7 +18,7 @@
 ) = {
   [*#role* \ ]
   [#link(url)[#company], #description \ ]
-  [*#dates* \ ]
+  [*#dates*]
   list(..achievements)
   [Key technologies: #technologies]
 }
