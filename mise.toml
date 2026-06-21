@@ -6,7 +6,7 @@
 
 [tools]
 "github:typst/typst" = "0.15.0"
-"pipx:markitdown" = "0.1.6"
+pandoc = "3.10"
 "npm:markdownlint-cli" = "0.49.0"
 
 [env]
@@ -23,9 +23,12 @@ sources = ["**/*.typ", "fonts/**"]
 description = "Generate README.md from the CV source (Typst → HTML → Markdown)"
 alias = "r"
 depends = ["compile"]
+# Typst HTML export keeps the headings/links the PDF loses; pandoc turns it into Markdown.
+# -raw_html drops Typst's <span> underline wrappers and keeps <br> as `\` hard breaks;
+# --wrap=none keeps each paragraph on one line.
 run = [
   "typst compile --ignore-system-fonts --format html --features html 'Vadim_Piven_CV.typ' '{{config_root}}/.cv.html'",
-  "markitdown '{{config_root}}/.cv.html' -o 'README.md'",
+  "pandoc -f html -t gfm-raw_html --wrap=none '{{config_root}}/.cv.html' -o 'README.md'",
   "rm -f '{{config_root}}/.cv.html'",
   "markdownlint --fix 'README.md'",
 ]
