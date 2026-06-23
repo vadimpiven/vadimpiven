@@ -1,0 +1,46 @@
+name: Regenerate
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.typ"
+      - "mise.toml"
+      - ".mise-version"
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: regenerate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regenerate:
+    name: Regenerate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # push the regenerated README.md and PDF back to main
+    steps:
+      - name: Checkout
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Read mise version
+        id: mise-version
+        run: echo "version=$(cat .mise-version)" >> "$GITHUB_OUTPUT"
+      - name: Install mise
+        uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac # v2.4.4
+        with:
+          version: ${{ steps.mise-version.outputs.version }}
+      - name: Generate README and PDF
+        run: mise run readme
+      - name: Commit regenerated files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- README.md Vadim_Piven_CV.pdf; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md Vadim_Piven_CV.pdf
+          git commit -m "Regenerate README.md and PDF"
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main
