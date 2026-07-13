@@ -6,6 +6,11 @@ langs: Rust
 ---
 <li>
   <a href="https://github.com/apache/datafusion/issues/18830">
+    <mark>Fixed</mark> physical query optimizer rules breaking result ordering
+  </a>
+</li>
+<li>
+  <a href="https://github.com/apache/datafusion/issues/18830">
     <mark>Suggested implementation</mark> for the new query optimizer rule
   </a>
 </li>
