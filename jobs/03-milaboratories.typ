@@ -9,7 +9,7 @@
     repertoire profiling with 8 out of 10 Big Pharma
     companies among its clients
   ],
-  dates: "April 2024 - Present",
+  dates: "April 2024 - July 2026",
   achievements: (
     [
       Developed a data lake for biological data, a

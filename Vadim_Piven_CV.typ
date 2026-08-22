@@ -6,6 +6,7 @@
 = Professional Experience
 
 #entries(
+  include "jobs/04-mongodb.typ",
   include "jobs/03-milaboratories.typ",
   include "jobs/02-movavi.typ",
   include "jobs/01-kaspersky.typ",

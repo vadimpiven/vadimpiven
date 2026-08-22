@@ -15,7 +15,7 @@
 
 
 Software Engineer with *6+ years* of experience
-*building cross-platform desktop products* with
+*building cross-platform products* with
 *Rust*, *C++ 20*  (STL,  Boost),  *Objective-C*, 
 and  *Qt/QML*.  Led  product  development  from  
 conception  to completion, focusing on security,

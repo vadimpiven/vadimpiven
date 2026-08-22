@@ -1,18 +1,25 @@
 # Vadim Piven, Senior Software Engineer
 
 Software Engineer with **6+ years** of experience **building
-cross-platform desktop products** with **Rust**, **C++ 20** (STL,
-Boost), **Objective-C**, and **Qt/QML**. Led product development from
-conception to completion, focusing on security, observability,
-performance and seamless user experience.
+cross-platform products** with **Rust**, **C++ 20** (STL, Boost),
+**Objective-C**, and **Qt/QML**. Led product development from conception
+to completion, focusing on security, observability, performance and
+seamless user experience.
 
 ## Professional Experience
+
+**C++ / Query Engine Developer**\
+[MongoDB](https://www.mongodb.com/), software company that develops and
+provides commercial support for the database engine MongoDB\
+**August 2026 - Present**
+
+Key technologies: C++.
 
 **Rust / Node.js Software Developer**\
 [MiLaboratories](https://milaboratories.com/), a biotech startup
 producing software for immune repertoire profiling with 8 out of 10 Big
 Pharma companies among its clients\
-**April 2024 - Present**
+**April 2024 - July 2026**
 
 - Developed a data lake for biological data, a domain-specific query
   engine, and a query language providing efficient access to the data in
