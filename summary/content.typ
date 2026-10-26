@@ -7,7 +7,7 @@
 
 #contacts(
     link("mailto:vadim@piven.tech"),
-    link("https://wa.me/34607537336")[+34-607-537-336],
+    link("https://wa.me/353830602430")[+353-83-060-2430],
     link("https://www.linkedin.com/in/vadimpiven/")[LinkedIn],
     link("https://github.com/vadimpiven")[GitHub],
     link("https://piven.tech")[Portfolio]
